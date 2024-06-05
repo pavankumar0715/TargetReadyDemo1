@@ -51,3 +51,9 @@ corderService/src/test/java/com/targetready/orderService/serviceTests/KafkaProdu
 aorderService/src/test/java/com/targetready/orderService/controllerTests/OrderControllerTests.java,b\2\b2e1520dab00f5182e288bc112554c8ba8f0c5cb
 Š
 ZpaymentService/src/main/java/com/targetready/paymentService/PaymentServiceApplication.java,f\b\fbc210261e9a2b2a775af1c48063a53455891bf7
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+‰
+YpaymentService/src/main/java/com/targetready/paymentService/producer/PaymentProducer.java,6\6\6636652f716dba387270acdd80dd5455a04d4632
+€
+PBankService/src/main/java/com/targetready/bankService/consumer/BankConsumer.java,f\4\f423f833e5f4ee14d5ce9828f34be2ef865ff142

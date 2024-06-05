@@ -20,16 +20,16 @@
     </properties>
 
     <modules>
-        <module>orderService</module>
-        <module>paymentService</module>
-        <module>bankService</module>
+        <module>OrderService</module>
+        <module>PaymentService</module>
+        <module>BankService</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.targetready</groupId>
-                <artifactId>orderService</artifactId>
+                <artifactId>OrderService</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
