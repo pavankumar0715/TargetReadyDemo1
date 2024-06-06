@@ -39,11 +39,12 @@ public class OrderConsumerTest {
 
     private KafkaTemplate<String, Object> kafkaTemplate;
 
+
     @Mock
-    private PaymentProducer obj2;
+    PaymentProducer paymentProducer;
 
     @InjectMocks
-    private OrderConsumer obj;
+    private OrderConsumer orderConsumer;
 
 
 
@@ -69,15 +70,15 @@ public class OrderConsumerTest {
     @Test
     public void testConsume() throws InterruptedException {
 
-        obj.consume(order);
+        orderConsumer.consume(order);
 
-        verify(obj2).sendPayment(paymentArgumentCaptor.capture());
+        verify(paymentProducer).sendPayment(paymentArgumentCaptor.capture());
         payment = paymentArgumentCaptor.getValue();
 
         assertThat(payment).isNotNull();
         assertThat(payment.getOrderId()).isEqualTo("123");
         assertThat(payment.getAmount()).isEqualTo(100.0);
-        assertThat(order.getBank()).isEqualTo("AXIS");
+        assertThat(order.getBank()).isEqualTo("SBI");
 
 
     }

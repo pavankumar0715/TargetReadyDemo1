@@ -44,10 +44,10 @@ public class BankConsumerTest {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @Mock
-    private BankProducer obj2;
+    private BankProducer bankProducer;
 
     @InjectMocks
-    private BankConsumer obj;
+    private BankConsumer bankConsumer;
 
 
 
@@ -73,10 +73,10 @@ public class BankConsumerTest {
     @Test
     public void testConsume() throws InterruptedException {
 
-        obj.consume(payment);
+        bankConsumer.consume(payment);
 
 
-        verify(obj2).sendInvoice(invoiceArgumentCaptor.capture());
+        verify(bankProducer).sendInvoice(invoiceArgumentCaptor.capture());
         invoice = invoiceArgumentCaptor.getValue();
 
         assertThat(invoice).isNotNull();

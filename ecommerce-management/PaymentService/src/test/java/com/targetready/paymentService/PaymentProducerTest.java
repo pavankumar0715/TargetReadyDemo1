@@ -40,13 +40,10 @@ public class PaymentProducerTest {
     @Mock
     private Span span;
 
-    //    #TODO change the naming convention
     @InjectMocks
-    private PaymentProducer obj;
+    private PaymentProducer paymentProducer;
 
 
-    @Autowired
-    private KafkaTracing kafkaTracing;
 
     @BeforeEach
     public void setUp() {
@@ -65,7 +62,7 @@ public class PaymentProducerTest {
     public void testSendPayment_success() throws InterruptedException {
         payment.setBank("SBI");
 
-        obj.sendPayment(payment);
+        paymentProducer.sendPayment(payment);
 
 
         verify(span, times(1)).tag("success", "Payment initiated");
@@ -80,7 +77,7 @@ public class PaymentProducerTest {
         payment.setBank("AXIS");
 
 
-        obj.sendPayment(payment);
+        paymentProducer.sendPayment(payment);
 
         verify(kafkaTemplate, never()).send(anyString(), any(Payment.class));
         verify(span, times(1)).tag("error", "Payment gateway timed out");

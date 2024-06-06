@@ -41,8 +41,7 @@ public class BankProducerTest {
     private Span span;
 
     @InjectMocks
-    private BankProducer obj;
-//    #TODO change the naming convention
+    private BankProducer bankProducer;
 
     @Autowired
     private KafkaTracing kafkaTracing;
@@ -63,7 +62,7 @@ public class BankProducerTest {
     public void testSendInvoice_success() throws InterruptedException {
         invoice.setBank("AXIS");
 
-        obj.sendInvoice(invoice);
+        bankProducer.sendInvoice(invoice);
 
         verify(kafkaTemplate, never()).send(anyString(), any(Invoice.class));
         verify(span, times(1)).tag("success", "Invoice Generated");
@@ -77,7 +76,7 @@ public class BankProducerTest {
         invoice.setBank("ICICI");
 
 
-        obj.sendInvoice(invoice);
+        bankProducer.sendInvoice(invoice);
 
         verify(kafkaTemplate, never()).send(anyString(), any(Invoice.class));
         verify(span, times(1)).tag("error", "Bank server is down");
@@ -92,7 +91,7 @@ public class BankProducerTest {
         invoice.setBank("HDFC");
 
 
-        obj.sendInvoice(invoice);
+        bankProducer.sendInvoice(invoice);
 
         verify(kafkaTemplate, never()).send(anyString(), any(Invoice.class));
         verify(span, times(1)).tag("error", "Bank not supported");

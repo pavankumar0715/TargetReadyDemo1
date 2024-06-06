@@ -1,0 +1,19 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+ó
+gecommerce-management/PaymentService/src/test/java/com/targetready/paymentService/OrderConsumerTest.java,2\2\2265abed36b19a8837fd04ff4c1d162264cf4659
+ú
+lecommerce-management/PaymentService/src/main/java/com/targetready/paymentService/consumer/OrderConsumer.java,2\9\29fe28a305413892c31fc72adf0dcb9174e32f3e
+û
+necommerce-management/PaymentService/src/main/java/com/targetready/paymentService/producer/PaymentProducer.java,8\8\883b97ef0eef9d2669cdec4ad0d26f84117ef97e
+ô
+iecommerce-management/PaymentService/src/test/java/com/targetready/paymentService/PaymentProducerTest.java,6\2\62e367e9d74c323ef91df56e514fc3ce9391e85d
+ê
+`ecommerce-management/BankService/src/test/java/com/targetready/bankService/BankProducerTest.java,4\d\4d1740b77536ada40d05a301787011120cb0ee4c
+ê
+`ecommerce-management/BankService/src/test/java/com/targetready/bankService/BankConsumerTest.java,7\a\7add0063f76803d55fa5baccb3d3ec92277db5de
+î
+decommerce-management/BankService/src/main/java/com/targetready/bankService/config/TracingConfig.java,4\e\4e6c0810ea7364240819deb64d5ee041d958dd4e
+ï
+eecommerce-management/BankService/src/main/java/com/targetready/bankService/consumer/BankConsumer.java,f\9\f9184eba23a89dd0cd9d4fe12889402804bd0fb1
