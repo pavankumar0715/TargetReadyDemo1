@@ -17,3 +17,9 @@ iecommerce-management/PaymentService/src/test/java/com/targetready/paymentServic
 decommerce-management/BankService/src/main/java/com/targetready/bankService/config/TracingConfig.java,4\e\4e6c0810ea7364240819deb64d5ee041d958dd4e
 •
 eecommerce-management/BankService/src/main/java/com/targetready/bankService/consumer/BankConsumer.java,f\9\f9184eba23a89dd0cd9d4fe12889402804bd0fb1
+–
+fecommerce-management/BankService/src/main/java/com/targetready/bankService/BankServiceApplication.java,f\d\fd4dedc321d80878106478b014e5eec5c988f322
+™
+iecommerce-management/OrderService/src/main/java/com/targetready/orderService/OrderServiceApplication.java,0\1\018bd9cc36f9f361d31b331ae5f0b7618dfed8e2
+Ÿ
+oecommerce-management/PaymentService/src/main/java/com/targetready/paymentService/PaymentServiceApplication.java,c\4\c445fef06b11f99154b460a0665df471dd119fc4

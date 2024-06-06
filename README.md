@@ -36,30 +36,30 @@ Messages are exchanged between these services via Apache Kafka.
    cd TargetReadyDemo1/ecommerce-management
    ```
 
-
 2. **Start the Environment**
 
    On 3 terminals, run the following:
+
    ```powershell
    .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
    ```
+
    ```powershell
    .\bin\windows\kafka-server-start.bat .\config\server.properties
    ```
+
    ```powershell
    java -jar .\zipkin-server-3.3.0-exec.jar
    ```
-
 
    This will start the following services:
 
    - Apache Kafka
    - Zipkin
-   
+
 3. **Build the Microservices**
 
 Build and run the microservices
-
 
 ## Configuration
 
@@ -67,18 +67,15 @@ Build and run the microservices
 
 Zipkin is configured to collect traces from the microservices. Each microservice is set up to send tracing data to Zipkin.
 
-
 ## Running the Demo
 
 1. **Send Messages**
    You can use tools like Postman or cURL to send requests to the microservices. Here are some example requests:
 
-
    ```bash
-     curl -X POST http://localhost:8080/target/orders -d 
+     curl -X POST http://localhost:8080/target/orders -d
      '{"orderId": "1001","amount": 102.0,"bank": "SBI","stock": 5}' -H "Content-Type: application/json"
    ```
-
 
 
 2. **View Traces**
@@ -92,6 +89,9 @@ Zipkin is configured to collect traces from the microservices. Each microservice
 
 Each of these actions generates tracing data that is collected by Zipkin allowing you to see the flow of messages and identify any bottlenecks or issues.
 
+
+![Zipkin Demo](Pictures/zipkin1.png)
+
 ## Conclusion
 
 This demo project illustrates the importance of using a tracing system like Zipkin to monitor and debug message flows in a microservices architecture. By integrating Zipkin with Grafana, you gain powerful visualization capabilities to enhance your observability and troubleshooting efforts.
@@ -100,4 +100,3 @@ This demo project illustrates the importance of using a tracing system like Zipk
 
 - [Zipkin Documentation](https://zipkin.io/pages/documentation.html)
 - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
-
