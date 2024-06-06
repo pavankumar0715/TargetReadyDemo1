@@ -20,6 +20,11 @@ The project consists of three microservices:
 
 Messages are exchanged between these services via Apache Kafka.
 
+## Technology Stack
+1. Apache Kafka
+2. Brave
+3. Zipkin
+   
 ## Tracing System
 
 ### Zipkin
