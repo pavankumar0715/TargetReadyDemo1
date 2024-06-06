@@ -2,6 +2,9 @@
 
 # Kafka Message Tracing with Zipkin and Grafana
 
+## Problem Statement 
+When a Kafka message goes to multiple microservices where each make some changes and enhancements, its hard to keep track of where it fails and what is the current status of a message.  Build a grafana dashboard which uses zipkin/jeager to track the message throughout its life cycle
+
 ## Overview
 
 This demo project showcases Zipkin to trace Kafka messages across three microservices: `BankService`, `PaymentService`, and `OrderService`. The purpose is to demonstrate the need and use of a tracing system to monitor and debug message flows in a microservices architecture.
@@ -10,9 +13,10 @@ This demo project showcases Zipkin to trace Kafka messages across three microser
 
 The project consists of three microservices:
 
-1. **BankService**: Receives payment messages and sends invoices
+
+1. **OrderService**: Receives customer orders and sends order messages
 2. **PaymentService**: Receives order and sends payment messages
-3. **OrderService**: Receives customer orders and sends order messages
+3.  **BankService**: Receives payment messages and sends invoices
 
 Messages are exchanged between these services via Apache Kafka.
 
