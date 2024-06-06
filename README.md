@@ -9,6 +9,9 @@ When a Kafka message goes to multiple microservices where each make some changes
 
 This demo project showcases Zipkin to trace Kafka messages across three microservices: `BankService`, `PaymentService`, and `OrderService`. The purpose is to demonstrate the need and use of a tracing system to monitor and debug message flows in a microservices architecture.
 
+
+
+
 ## Microservices Architecture
 
 The project consists of three microservices:
@@ -17,6 +20,8 @@ The project consists of three microservices:
 1. **OrderService**: Receives customer orders and sends order messages
 2. **PaymentService**: Receives order and sends payment messages
 3.  **BankService**: Receives payment messages and sends invoices
+
+![Screenshot 2024-06-06 175426](https://github.com/pavankumar0715/TargetReadyDemo1/assets/114218468/c865a45a-f5b9-4572-ae03-098ed63a1e91)
 
 Messages are exchanged between these services via Apache Kafka.
 
