@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Random;
 
 import static java.lang.Math.min;
@@ -49,7 +50,7 @@ public class PaymentProducer {
     }
 
     public boolean paymentSimulation(String bank) {
-        if(bank=="AXIS") return false;
+        if(Objects.equals(bank, "AXIS")) return false;
         Random random = new Random();
         int processingTime = random.nextInt(4)+1;
 

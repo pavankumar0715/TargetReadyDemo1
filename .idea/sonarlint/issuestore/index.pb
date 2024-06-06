@@ -23,3 +23,5 @@ fecommerce-management/BankService/src/main/java/com/targetready/bankService/Bank
 iecommerce-management/OrderService/src/main/java/com/targetready/orderService/OrderServiceApplication.java,0\1\018bd9cc36f9f361d31b331ae5f0b7618dfed8e2
 Ÿ
 oecommerce-management/PaymentService/src/main/java/com/targetready/paymentService/PaymentServiceApplication.java,c\4\c445fef06b11f99154b460a0665df471dd119fc4
+•
+eecommerce-management/BankService/src/main/java/com/targetready/bankService/producer/BankProducer.java,c\b\cb248c9fe27f3aa702b362f6e8d403f4a1b7237c
