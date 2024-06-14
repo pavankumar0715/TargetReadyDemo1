@@ -1,12 +1,18 @@
 package com.targetready.orderService.model;
-
+@Table(name = "orders")
 public class Invoice {
+     @Id
+    @Column(name = "orderId")
     private String orderId;
+    @Column(name = "amount")
     private double amount;
-
+    @Column(name = "transactionId")
     private String transactionId;
+    @Column(name = "status")
     private boolean status;
+    @Column(name = "bank")
     private String bank;
+
 
     public String getBank() {
         return bank;
