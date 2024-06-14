@@ -17,8 +17,8 @@ public class KafkaProducerService {
 
 
     @Autowired
-
     private KafkaTracing kafkaTracing;
+
     @Autowired
     private Tracing tracing;
 

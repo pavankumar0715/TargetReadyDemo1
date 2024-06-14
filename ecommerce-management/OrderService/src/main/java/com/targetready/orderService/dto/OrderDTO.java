@@ -1,20 +1,15 @@
-package com.targetready.orderService.model;
+package com.targetready.orderService.dto;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-@Table(name = "orders1")
-public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int stock;
+public class OrderDTO {
     private String orderId;
     private double amount;
     private String bank;
+    private int stock;
 
     public String getOrderId() {
         return orderId;
