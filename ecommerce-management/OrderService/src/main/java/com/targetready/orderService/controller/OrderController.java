@@ -3,7 +3,6 @@ package com.targetready.orderService.controller;
 
 import com.targetready.orderService.dto.OrderDTO;
 import com.targetready.orderService.model.Order;
-import com.targetready.orderService.service.KafkaProducerService;
 import com.targetready.orderService.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,8 +15,7 @@ import java.util.List;
 @RequestMapping("/v1/target/orders")
 public class OrderController {
 
-    @Autowired
-    private KafkaProducerService kafkaProducerService;
+
 
     @Autowired
     private OrderService orderService;

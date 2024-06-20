@@ -17,8 +17,8 @@ public class KafkaProducerService {
 
 
     @Autowired
-    private KafkaTracing kafkaTracing;
 
+    private KafkaTracing kafkaTracing;
     @Autowired
     private Tracing tracing;
 
@@ -29,7 +29,7 @@ public class KafkaProducerService {
         this.kafkaTemplate=kafkaTemplate;
     }
 
-//    @PostMapping
+    @PostMapping
     public void sendOrder(Order order) {
         Span span = tracing.tracer().nextSpan().name("order").start();
         try{
