@@ -2,15 +2,12 @@ package com.targetready.orderService.service;
 
 
 import brave.Span;
-import brave.Tracer;
 import brave.Tracing;
 import brave.kafka.clients.KafkaTracing;
 import com.targetready.orderService.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 public class KafkaProducerService {
@@ -56,7 +53,7 @@ public class KafkaProducerService {
         if(order.getAmount()<0) {
             throw new IllegalArgumentException("Price should be greater than 0");
         }
-        if(order.getStock()<=0) {
+        if(order.getId()<=0) {
             throw new IllegalArgumentException("Product is out of Stock");
         }
     }

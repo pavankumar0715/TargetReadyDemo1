@@ -61,7 +61,7 @@ public class OrderConsumerTest {
 
         order.setOrderId("123");
         order.setAmount(100.0);
-        order.setStock(50);
+        order.setId(50);
         order.setBank("SBI");
 
         kafkaTemplate.send("orders", order);

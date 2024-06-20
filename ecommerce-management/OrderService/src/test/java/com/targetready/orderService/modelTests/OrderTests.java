@@ -33,8 +33,8 @@ class OrderTest {
     @Test
     void testGetAndSetStock() {
         Order order = new Order();
-        order.setStock(50);
-        assertEquals(50, order.getStock());
+        order.setId(50);
+        assertEquals(50, order.getId());
     }
 
 

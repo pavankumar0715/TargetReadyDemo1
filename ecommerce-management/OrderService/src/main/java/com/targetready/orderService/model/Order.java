@@ -7,11 +7,11 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "orders1")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int stock;
+    private int id;
     private String orderId;
     private double amount;
     private String bank;
@@ -40,11 +40,11 @@ public class Order {
         this.bank = bank;
     }
 
-    public int getStock() {
-        return stock;
+    public int getId() {
+        return id;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setId(int id) {
+        this.id = id;
     }
 }

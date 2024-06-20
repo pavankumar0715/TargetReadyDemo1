@@ -1,0 +1,17 @@
+{
+    "name": "postgres-connector",
+    "config": {
+      "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+      "database.hostname": "localhost",
+      "database.port": "5432",
+      "database.user": "postgres",
+      "database.password": "Koustubh",
+      "database.dbname": "orders",
+      "database.server.name": "OrderService-Local",
+      "table.include.list": "public.yourtable",
+      "plugin.name": "pgoutput",
+      "database.history.kafka.bootstrap.servers": "localhost:9092",
+      "database.history.kafka.topic": "schema-changes.orders"
+    }
+  }
+  

@@ -25,3 +25,5 @@ iecommerce-management/OrderService/src/main/java/com/targetready/orderService/Or
 oecommerce-management/PaymentService/src/main/java/com/targetready/paymentService/PaymentServiceApplication.java,c\4\c445fef06b11f99154b460a0665df471dd119fc4
 ï
 eecommerce-management/BankService/src/main/java/com/targetready/bankService/producer/BankProducer.java,c\b\cb248c9fe27f3aa702b362f6e8d403f4a1b7237c
+ç
+]ecommerce-management/OrderService/src/main/java/com/targetready/orderService/model/Order.java,3\2\32997403cd01a2afa12e73a53ea6a0cf95736707

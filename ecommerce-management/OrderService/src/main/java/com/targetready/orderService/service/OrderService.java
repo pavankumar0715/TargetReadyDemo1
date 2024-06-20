@@ -8,7 +8,6 @@ import com.targetready.orderService.mapper.OrderMapper;
 import com.targetready.orderService.model.Order;
 import com.targetready.orderService.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.expression.spel.ast.NullLiteral;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -64,7 +63,7 @@ public class OrderService {
         order.setOrderId(orderDTO.getOrderId());
         order.setBank(orderDTO.getBank());
         order.setAmount(orderDTO.getAmount());
-        order.setStock(orderDTO.getStock());
+        order.setId(orderDTO.getStock());
         order = orderRepository.save(order);
         return orderMapper.toDto(order);
     }
@@ -104,7 +103,7 @@ public class OrderService {
         if(order.getAmount()<0) {
             throw new IllegalArgumentException("Price should be greater than 0");
         }
-        if(order.getStock()<=0) {
+        if(order.getId()<=0) {
             throw new IllegalArgumentException("Product is out of Stock");
         }
     }
